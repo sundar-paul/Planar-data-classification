@@ -177,9 +177,9 @@ if __name__=="__main__":
     layers_dims = (n_x, n_h, n_y)
     learning_rate = 0.0075
 
-    #parameters, costs = two_layer_model(train_x, train_y, layers_dims = (n_x, n_h, n_y), num_iterations = 2500, print_cost=True)
-    layers_dims = [12288, 20, 7, 5, 1] #  4-layer model
-    parameters, costs = L_layer_model(train_x, train_y, layers_dims, num_iterations = 2500, print_cost = True)
+    parameters, costs = two_layer_model(train_x, train_y, layers_dims = (n_x, n_h, n_y), num_iterations = 2500, print_cost=True)
+    #layers_dims = [12288, 20, 7, 5, 1] #  4-layer model
+    #parameters, costs = L_layer_model(train_x, train_y, layers_dims, num_iterations = 2500, print_cost = True)
     plot_costs(costs, learning_rate)
 
     predictions_train = predict(train_x, train_y, parameters)
